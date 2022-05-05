@@ -45,6 +45,13 @@ console.log(dt)
 
 // Part 2
 
+let st = new Date();
+function generic(inp) {
+  st.setHours(st.getHours() + inp);
+// document.write(dt);
+console.log(st)
+}
+console.log(generic(30))
 
 // Exercise 4
 let myVar=setInterval(myTimer, 100);
