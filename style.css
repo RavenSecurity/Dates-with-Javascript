@@ -9,14 +9,61 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
+    background-color: #eaeaea;
 }
+
 #clock{
-    width: 40vw;
-    background-color: rgb(125, 202, 202);
+    width: 30vw;
     text-align: center;
 }
 
-h1{
+#time{
+    font-family: sans-serif;
+    font-weight: 900;
     font-size: 90px;
+    text-align: center;
+    color: #474747;
+}
+
+#calendar {
+    background-color: #fff;
+    width: 15vw;
+    height: 30vh;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#day {
+    background-color: #b03737;
+    border: solid  4px #912c2c;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 100%;
+    height: 7vh;
+    color: #fff;
+    text-align: center;
+}
+
+#date {
+    color: #909090;
+    border: solid  4px #d3d3d3;
+}
+
+#month {
+    color: #7c7c7c;
+    border: solid  4px #d3d3d3;
+}
+
+#year {
+    background-color: #b03737;
+    border: solid  4px #912c2c;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 100%;
+    height: 7vh;
+    color: #fff;
     text-align: center;
 }

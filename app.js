@@ -47,8 +47,23 @@ console.log(dt)
 
 
 // Exercise 4
-var myVar=setInterval(myTimer, 1000);
-    function myTimer(){
-        var a=new Date();
-        document.getElementById("time").innerHTML=a.toLocaleTimeString();
-    }
+var myVar=setInterval(myTimer, 100);
+function myTimer(){
+  let time = new Date();
+  let a = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
+
+  let b = time.getDay()
+  let c = time.getDate()
+  let d = time.getMonth()
+  let e = time.getFullYear()
+
+
+  document.getElementById("time").innerHTML=a;
+  document.getElementById("day").innerHTML=b;
+  document.getElementById("date").innerHTML=c;
+  document.getElementById("month").innerHTML=d;
+  document.getElementById("year").innerHTML=e;
+
+// toLocaleTimeString() pour avoir le format AM/PM
+}
+
