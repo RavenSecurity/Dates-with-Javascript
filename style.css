@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+#clock{
+    width: 40vw;
+    background-color: rgb(125, 202, 202);
+    text-align: center;
+}
+
+h1{
+    font-size: 90px;
+    text-align: center;
+}
