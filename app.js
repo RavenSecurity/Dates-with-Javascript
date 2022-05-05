@@ -47,23 +47,39 @@ console.log(dt)
 
 
 // Exercise 4
-var myVar=setInterval(myTimer, 100);
+let myVar=setInterval(myTimer, 100);
+
+let AMP = false
+
 function myTimer(){
   let time = new Date();
-  let a = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
+  let a = time.toLocaleString("en-US", { hour: 'numeric',minute: '2-digit', hour12: AMP }) + ":"
+  let s = time.getSeconds()
 
-  let b = time.getDay()
+  let b = time.toLocaleString('en-us', {weekday: 'short'})
   let c = time.getDate()
-  let d = time.getMonth()
+  let d = time.toLocaleString('en-us', {month: 'short'})
   let e = time.getFullYear()
 
-
   document.getElementById("time").innerHTML=a;
+  document.getElementById("seconds").innerHTML=s;
+
   document.getElementById("day").innerHTML=b;
   document.getElementById("date").innerHTML=c;
   document.getElementById("month").innerHTML=d;
   document.getElementById("year").innerHTML=e;
 
-// toLocaleTimeString() pour avoir le format AM/PM
+  // "05243523452".split("").reverse().splice(0,2).reverse().join("")
 }
 
+// toLocaleTimeString() pour avoir le format AM/PM
+
+let ampm = document.getElementById("time")
+
+function Twelve() {
+  AMP = !AMP
+}
+
+ampm.addEventListener("click", Twelve);
+
+console.log(ampm)
